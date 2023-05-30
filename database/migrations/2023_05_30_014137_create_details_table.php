@@ -14,7 +14,7 @@ return new class extends Migration
             $table->longText('description');
             $table->string('author');
             $table->date('datepost');
-
+            $table->integer('likes');
             $table->timestamps();
         });
     }

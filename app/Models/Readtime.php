@@ -5,10 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Detail extends Model
+class Readtime extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id';
+
     public function Book(){
-        return $this->belongsTo(Book::class);
+        return $this->hasMany(Book::class);
     }
 }

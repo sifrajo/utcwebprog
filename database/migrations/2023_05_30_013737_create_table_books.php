@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('readtime_id')->references('id')->on('readtimes')->onDelete('cascade')->onUpdate('cascade');
             $table->string('title');
+            $table->string('description');
             $table->timestamps();
         });
     }
